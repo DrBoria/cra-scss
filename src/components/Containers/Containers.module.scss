@@ -1,0 +1,46 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$offset-section-desktop-x: calc((100% - var(--width-container-content-max)) / 2);
+
+.pageContainer {
+  min-height: 100vh;
+  padding-top: var(--height-header);
+}
+
+.basicSection {
+  height: var(--height-screen-mobile);
+  max-height: var(--height-screen-max);
+  padding: var(--offset-section);
+
+  &[data-theme='light'] {
+    background-color: $color-section-background-light;
+  }
+  &[data-theme='dark'] {
+    background-color: $color-section-background-dark;
+  }
+
+  @include tablet {
+    height: var(--height-screen-tablet);
+  }
+  @include desktop {
+    height: var(--height-screen-desctop);
+    padding-right: $offset-section-desktop-x;
+    padding-left: $offset-section-desktop-x;
+  }
+
+  &.noHeightLimit {
+    height: auto;
+    min-height: var(--height-screen-tablet);
+    max-height: unset;
+  }
+}
+
+.headingContainer {
+  width: 40%;
+  text-align: left;
+
+  &.withOffset {
+    margin-bottom: var(--offset-section);
+  }
+}

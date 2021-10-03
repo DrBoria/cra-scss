@@ -1,0 +1,54 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$offset-horizontal-confirmation: calc(var(--offset-element-content) * 2);
+
+.button {
+  padding: var(--offset-element-content);
+  border: none;
+  // Clear default button styles
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: inherit;
+
+  @include roundedCorners;
+
+  // Light theme types
+  [data-theme='light'] & {
+    &.switcher {
+      border: var(--border-size) solid $color-element-border-light;
+    }
+    &.switcherActive {
+      border: var(--border-size) solid $color-element-border-light;
+      background-color: $color-element-background-light;
+    }
+  }
+
+  // Dark theme types
+  [data-theme='dark'] & {
+    &.confirmation {
+      padding: var(--offset-element-content) #{$offset-horizontal-confirmation};
+      border: none;
+      background: $color-element-background-dark;
+      color: $color-element-text-dark;
+    }
+
+    &.navigation {
+      border: var(--border-size) solid $color-element-border-light;
+      color: $color-navigation-text-dark;
+      text-transform: uppercase;
+    }
+
+    &.menu {
+      border: none;
+      color: $color-navigation-text-dark;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.withOffset {
+  margin-bottom: var(--offset-between-elements);
+}

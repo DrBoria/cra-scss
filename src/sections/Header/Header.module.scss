@@ -1,0 +1,31 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$offset-header-vertical: calc(var(--offset-section) / 2);
+$offset-header-horizontal: calc((100% - var(--width-container-content-max)) / 2);
+
+.header {
+  position: fixed;
+  z-index: $z-index-navigation;
+  top: 0;
+  left: 0;
+
+  display: grid;
+
+  width: 100%;
+  height: var(--height-header);
+  align-items: center;
+  padding: $offset-header-vertical var(--offset-section);
+  background-color: $color-section-background-dark;
+
+  .menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  grid-template-columns: 2fr 5fr;
+
+  @include desktop {
+    padding: $offset-header-vertical $offset-header-horizontal;
+  }
+}

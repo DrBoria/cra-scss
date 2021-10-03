@@ -1,0 +1,65 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  @include basicFont;
+  @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+
+  // font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+  --font-size: calc(
+    #{$font-size-min} + #{strip-unit($font-size-max - $font-size-min)} *
+      ((100vw - #{$screen-mobile-width}) / #{strip-unit($screen-desktop-width - $screen-mobile-width)})
+  );
+
+  font-size: var(--font-size);
+
+  // Border
+  --border-radius: #{$border-radius-default};
+  --border-size: #{$size-default-border};
+
+  // Header
+  --height-header: #{$height-header-mobile};
+
+  // Offsets
+  --offset-section: #{$offset-section-mobile};
+  --offset-between-elements: #{$offset-between-elements-mobile};
+  --offset-element-content: #{$offset-element-content-mobile};
+  --offset-between-social: calc(var(--offset-between-elements) / 2);
+
+  // Sizes
+  --height-screen-mobile: calc(#{$screen-mobile-height} - var(--height-header));
+  --height-screen-tablet: calc(#{$screen-tablet-height} - var(--height-header));
+  --height-screen-desctop: calc(#{$screen-desktop-height} - var(--height-header));
+  --height-screen-max: calc(#{$screen-desktop-height} - var(--height-header));
+  --width-container-content-max: calc(#{$screen-desktop-width} - var(--offset-section));
+
+  @include tablet {
+    --height-header: #{$height-header-tablet};
+    --offset-section: #{$offset-section-tablet};
+    --offset-between-elements: #{$offset-between-elements-tablet};
+    --offset-element-content: #{$offset-element-content-tablet};
+  }
+  @include desktop {
+    --height-header: #{$height-header-desktop};
+    --offset-section: #{$offset-section-desktop};
+    --offset-between-elements: #{$offset-between-elements-desktop};
+    --offset-element-content: #{$offset-element-content-desktop};
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

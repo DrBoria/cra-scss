@@ -1,0 +1,73 @@
+@import 'styles/themes/dark';
+@import 'styles/themes/light';
+/**********************************************************/
+/*********************** Z-Index **************************/
+/**********************************************************/
+
+$z-index-navigation: 10;
+$z-index-notification: 100;
+$z-index-alert: 1000;
+
+/**********************************************************/
+/*********************** Typography ***********************/
+/**********************************************************/
+
+$font-size-min: 12px;
+$font-size-max: 16px;
+
+$font-titles: 'Roboto', Arial, sans-serif;
+$font-text: 'Montserrat', sans-serif;
+
+$font-size-sectionTitle: 2rem;
+$font-size-subtitle: 1.3125rem;
+$line-height-subtitle: 1.8125rem;
+
+/**********************************************************/
+/********************* Offsets Basic **********************/
+/**********************************************************/
+
+// Offset = padding or margin
+// Margin could be only right and bottom. Top or left should be parent's padding
+$offset-basic: 8px;
+
+// Section
+$offset-section-mobile: $offset-basic * 3;
+$offset-section-tablet: $offset-section-mobile * 2;
+$offset-section-desktop: $offset-section-tablet * 2;
+
+// Between Elements
+$offset-between-elements-mobile: $offset-basic;
+$offset-between-elements-tablet: $offset-between-elements-mobile;
+$offset-between-elements-desktop: $offset-between-elements-tablet * 2;
+
+// Element content (offset from borders of element to content)
+$offset-element-content-mobile: $offset-basic;
+$offset-element-content-tablet: $offset-element-content-mobile * 2;
+$offset-element-content-desktop: $offset-element-content-tablet;
+
+/**********************************************************/
+/********************* Screen Sizes ***********************/
+/**********************************************************/
+
+// Width
+$screen-mobile-width: 320px;
+$screen-tablet-width: 600px;
+$screen-desktop-width: 1600px;
+
+// Height
+$screen-mobile-height: 640px;
+$screen-tablet-height: 720px;
+$screen-desktop-height: 980px;
+
+/**********************************************************/
+/******************** Element Sizes ***********************/
+/**********************************************************/
+
+// Header
+$height-header-mobile: 75px;
+$height-header-tablet: 100px;
+$height-header-desktop: 150px;
+
+//border-radius
+$border-radius-default: 8px;
+$size-default-border: 1px;
