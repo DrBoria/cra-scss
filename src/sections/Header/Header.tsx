@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import HorizontalMenu from 'components/HorizontalMenu';
+import Button from 'components/Button';
 
 import { TMenu } from 'api/types';
 
@@ -12,7 +12,11 @@ export type THeaderProps = {
 
 const Header: FC<THeaderProps> = ({ menu }) => (
   <div data-theme="dark" className={styles.header}>
-    <HorizontalMenu fields={menu} />
+    {menu.map((field, index) => (
+      <a href={field.url} key={index}>
+        <Button type="menu">{field.title}</Button>
+      </a>
+    ))}
   </div>
 );
 

@@ -17,24 +17,10 @@ $offset-horizontal-confirmation: calc(var(--offset-element-content) * 2);
 
   // Light theme types
   [data-theme='light'] & {
-    &.switcher {
-      border: var(--border-size) solid $color-element-border-light;
-    }
-    &.switcherActive {
-      border: var(--border-size) solid $color-element-border-light;
-      background-color: $color-element-background-light;
-    }
   }
 
   // Dark theme types
   [data-theme='dark'] & {
-    &.confirmation {
-      padding: var(--offset-element-content) #{$offset-horizontal-confirmation};
-      border: none;
-      background: $color-element-background-dark;
-      color: $color-element-text-dark;
-    }
-
     &.navigation {
       border: var(--border-size) solid $color-element-border-light;
       color: $color-navigation-text-dark;
