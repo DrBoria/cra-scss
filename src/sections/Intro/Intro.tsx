@@ -12,7 +12,7 @@ const Intro: FC<any> = () => (
       <PageTitle className={styles.title}>
         We <Highlighted>design</Highlighted> & <Highlighted>develop</Highlighted> robust solutions for your products
       </PageTitle>
-      <Button type="confirmation">MAKE ORDER</Button>
+      <Button>MAKE ORDER</Button>
     </div>
 
     {/* Position relative is fix for absolute positioning of image */}
