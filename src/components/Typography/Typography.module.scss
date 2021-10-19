@@ -2,7 +2,9 @@
 @import 'styles/mixins';
 
 .pageTitle {
-  @include h1;
+  @include basicFont;
+  font-family: $font-titles;
+
   text-transform: capitalize;
 
   // Light theme
@@ -21,8 +23,9 @@
 }
 
 .subTitle {
-  @include h2;
+  @include basicFont;
 
+  font-family: $font-titles;
   font-size: $font-size-subtitle;
   line-height: $line-height-subtitle;
 
@@ -38,8 +41,9 @@
 }
 
 .sectionTitle {
-  @include h3;
+  @include basicFont;
 
+  font-family: $font-titles;
   font-size: $font-size-sectionTitle;
 
   // Light theme
@@ -55,8 +59,6 @@
 
 .plainText {
   @include basicFont;
-
-  margin: 0;
 
   font-size: 1.1875rem;
   line-height: 1.6875rem;
