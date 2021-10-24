@@ -47,6 +47,7 @@ html {
     --offset-between-elements: #{$offset-between-elements-tablet};
     --offset-element-content: #{$offset-element-content-tablet};
   }
+
   @include desktop {
     --height-header: #{$height-header-desktop};
     --offset-section: #{$offset-section-desktop};

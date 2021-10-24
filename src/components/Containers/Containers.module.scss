@@ -23,6 +23,7 @@ $offset-section-desktop-x: calc((100% - var(--width-container-content-max)) / 2)
   @include tablet {
     height: var(--height-screen-tablet);
   }
+
   @include desktop {
     height: var(--height-screen-desctop);
     padding-right: $offset-section-desktop-x;

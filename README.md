@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# React Toolkit Template with SCSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> App based on typescript, react and SCSS (https://sass-lang.com/guide)
 
-## Available Scripts
+## INSTALLATION and START
 
-In the project directory, you can run:
+    git clone https://github.com/DrBoria/cra-scss.git
+    cd ./cra-scss
+    yarn
+    yarn start
 
-### `yarn start`
+## FOLDERS DESCRIPTION
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    public/              public files for build
+    src/                 code of all application
+       /api              predefined list of queries to BE
+       /components       moleculas in atomic design. Reusable components (like buttons, inputs etc.). Should have only ui logic, not business logic (dumb components).
+       /sections         organisms in atomic design. Could contain business logic, but main purpose is combining components
+       /styles           styles, themes, theme providers and so on
+       /utils            functions helpers (fetch, get headers and so on)
+       index.tsx         app entry point
+       index.css         basic styles of application (html, body)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## HOW TO WRITE CODE
 
-### `yarn test`
+Please use following style/princeples:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    1) Use only dumb components (without business logic) in components folder
+    2) Components should know how do they look like, not sections that contains it
+       It means - instead of redefining styles on every page - just make new type of button/input inside button/input component and just pass this type on your page
+    3) Make sections and pages small and readable as it possible (no need to make more than 40 lines of jsx inside page)
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    ** styles **
+    5) scss variables should be used just for sematic highlighting value maning
+    6) css-variables declared globaly in styles/globals.scss preferable to use in app
