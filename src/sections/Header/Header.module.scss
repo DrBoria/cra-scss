@@ -17,7 +17,7 @@ $offset-header-horizontal: calc((100% - var(--width-container-content-max)) / 2)
 
   padding: $offset-header-vertical var(--offset-section);
 
-  background-color: $color-section-background-dark;
+  background-color: var(--color-section-background);
 
   @include desktop {
     padding: $offset-header-vertical $offset-header-horizontal;

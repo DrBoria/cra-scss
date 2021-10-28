@@ -3,6 +3,7 @@
 ```jsx
 import { PageContainer, BasicSection, HeadingContainer } from 'components/Containers';
 import { PlainText, SectionTitle } from 'components/Typography';
+import ThemeProvider from 'styles/themes/ThemeProvider';
 
 <PageContainer>
   <BasicSection>
@@ -10,11 +11,13 @@ import { PlainText, SectionTitle } from 'components/Typography';
     <PlainText>Page container got offset from top for header</PlainText>
   </BasicSection>
 
-  <BasicSection type="dark">
-    <HeadingContainer>
-      <SectionTitle withOffset>Dark theme</SectionTitle>
-      <PlainText>Basic section + heading container usage</PlainText>
-    </HeadingContainer>
-  </BasicSection>
+  <ThemeProvider theme="dark">
+    <BasicSection>
+      <HeadingContainer>
+        <SectionTitle withOffset>Dark theme</SectionTitle>
+        <PlainText>Basic section + heading container usage</PlainText>
+      </HeadingContainer>
+    </BasicSection>
+  </ThemeProvider>
 </PageContainer>;
 ```

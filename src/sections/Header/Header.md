@@ -3,6 +3,7 @@
 ```jsx
 import { PageContainer } from 'components/Containers';
 import Header from 'sections/Header';
+import ThemeProvider from 'styles/themes/ThemeProvider';
 
 const menuFields = [
   {
@@ -27,8 +28,10 @@ const menuFields = [
   },
 ];
 
-<PageContainer style={{ height: '50vh', overflow: 'auto', backgroundColor: '#008080' }}>
-  <Header menu={menuFields} />
-  <div style={{ height: '150vh' }} />
-</PageContainer>;
+<ThemeProvider theme="dark">
+  <PageContainer style={{ height: '50vh', overflow: 'auto', backgroundColor: '#008080' }}>
+    <Header menu={menuFields} />
+    <div style={{ height: '150vh' }} />
+  </PageContainer>
+</ThemeProvider>;
 ```

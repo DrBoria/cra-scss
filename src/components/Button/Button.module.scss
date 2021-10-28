@@ -15,23 +15,16 @@ $offset-horizontal-confirmation: calc(var(--offset-element-content) * 2);
 
   @include roundedCorners;
 
-  // Light theme types
-  [data-theme='light'] & {
+  &.navigation {
+    border: var(--border-size) solid var(--color-element-border);
+    color: var(--color-navigation-text);
+    text-transform: uppercase;
   }
 
-  // Dark theme types
-  [data-theme='dark'] & {
-    &.navigation {
-      border: var(--border-size) solid $color-element-border-light;
-      color: $color-navigation-text-dark;
-      text-transform: uppercase;
-    }
-
-    &.menu {
-      border: none;
-      color: $color-navigation-text-dark;
-      text-transform: uppercase;
-    }
+  &.menu {
+    border: none;
+    color: var(--color-navigation-text);
+    text-transform: uppercase;
   }
 }
 

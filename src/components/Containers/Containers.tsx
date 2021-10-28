@@ -10,7 +10,6 @@ type IContainersProps = {
 
 type ISectionProps = {
   noHeightLimit?: boolean;
-  type?: 'light' | 'dark' | 'purple';
 } & IContainersProps;
 
 type IHeadingProps = {
@@ -27,17 +26,9 @@ export const PageContainer: FC<IContainersProps> = ({ className = '', style, chi
   </div>
 );
 
-export const BasicSection: FC<ISectionProps> = ({
-  className = '',
-  style,
-  noHeightLimit,
-  type = 'light',
-  children,
-  ...props
-}) => {
+export const BasicSection: FC<ISectionProps> = ({ className = '', style, noHeightLimit, children, ...props }) => {
   return (
     <div
-      data-theme={type}
       className={classNames(className, styles.basicSection, {
         [styles.noHeightLimit]: noHeightLimit,
       })}

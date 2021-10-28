@@ -10,7 +10,7 @@ const Intro: FC<any> = () => (
   <BasicSection type="dark" className={styles.intro}>
     <div className={styles.column}>
       <PageTitle className={styles.title}>
-        We <Highlighted>design</Highlighted> & <Highlighted>develop</Highlighted> robust solutions for your products
+        We <Highlighted>design</Highlighted> & <Highlighted>develop</Highlighted> vegetables
       </PageTitle>
       <Button>MAKE ORDER</Button>
     </div>

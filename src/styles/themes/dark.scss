@@ -3,17 +3,39 @@
 /**********************************************************/
 
 // Background colors
-$color-section-background-dark: #090a1d;
-$color-element-background-dark: linear-gradient(87.1deg, #6e3ed2 0%, #9e8ffb 100%);
-$color-label-background-dark: #aaaaaa;
-$color-background-cookie: #001761;
+$color-section-background: #090a1d;
+$color-element-background: linear-gradient(87.1deg, #6e3ed2 0%, #9e8ffb 100%);
+$color-label-background: #aaaaaa;
+$color-element-hover-background: #ebebeb;
 
 // Typography colors
-$color-element-text-dark: #ffffff;
-$color-plain-text-dark: #ffffff;
-$color-title-text-dark: #ffffff;
-$color-navigation-text-dark: #ffffff;
-$color-label-text-dark: #ffffff;
+$color-element-text: #ffffff;
+$color-plain-text: #ffffff;
+$color-title-text: #ffffff;
+$color-navigation-text: #ffffff;
+$color-label-text: #ffffff;
 
 // Element decoration colors
-$color-title-text-highliter-dark: #6e3ed2;
+$color-underline: #00b3be;
+$color-element-border: #f6f6f6;
+$color-title-text-highliter: #6e3ed2;
+
+.dark {
+  // Background colors
+  --color-section-background: #{$color-section-background};
+  --color-element-background: #{$color-element-background};
+  --color-element-hover-background: #{$color-element-hover-background};
+  --color-label-background: #{$color-label-background};
+
+  // Typography colors
+  --color-element-text: #{$color-element-text};
+  --color-plain-text: #{$color-plain-text};
+  --color-title-text: #{$color-title-text};
+  --color-navigation-text: #{$color-navigation-text};
+  --color-label-text: #{$color-label-text};
+
+  // Element decoration colors
+  --color-underline: #{$color-underline};
+  --color-element-border: #{$color-element-border};
+  --color-title-text-highliter: #{$color-title-text-highliter};
+}

@@ -2,8 +2,11 @@
 
 ```jsx
 import Intro from './Intro';
+import ThemeProvider from 'styles/themes/ThemeProvider';
 
 <>
-  <Intro />
+  <ThemeProvider theme="dark">
+    <Intro />
+  </ThemeProvider>
 </>;
 ```

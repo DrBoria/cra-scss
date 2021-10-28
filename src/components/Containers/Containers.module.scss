@@ -13,12 +13,7 @@ $offset-section-desktop-x: calc((100% - var(--width-container-content-max)) / 2)
   max-height: var(--height-screen-max);
   padding: var(--offset-section);
 
-  &[data-theme='light'] {
-    background-color: $color-section-background-light;
-  }
-  &[data-theme='dark'] {
-    background-color: $color-section-background-dark;
-  }
+  background-color: var(--color-section-background);
 
   @include tablet {
     height: var(--height-screen-tablet);

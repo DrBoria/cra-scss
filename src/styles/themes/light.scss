@@ -3,15 +3,39 @@
 /**********************************************************/
 
 // Background colors
-$color-section-background-light: #ffffff;
-$color-element-background-light: #f6f6f6;
-$color-element-hover-background-light: #ebebeb;
-$color-background-cookie: #001761;
+$color-section-background: #ffffff;
+$color-element-background: #f6f6f6;
+$color-element-hover-background: #ebebeb;
+$color-label-background: #aaaaaa;
 
 // Typography colors
-$color-plain-text-light: #090a1d;
-$color-title-text-light: #090a1d;
+$color-element-text: #090a1d;
+$color-plain-text: #090a1d;
+$color-title-text: #090a1d;
+$color-navigation-text: #090a1d;
+$color-label-text: #090a1d;
 
 // Element decoration colors
-$color-underline-light: #00b3be;
-$color-element-border-light: #f6f6f6;
+$color-underline: #00b3be;
+$color-element-border: #f6f6f6;
+$color-title-text-highliter: #6e3ed2;
+
+.light {
+  // Background colors
+  --color-section-background: #{$color-section-background};
+  --color-element-background: #{$color-element-background};
+  --color-element-hover-background: #{$color-element-hover-background};
+  --color-label-background: #{$color-label-background};
+
+  // Typography colors
+  --color-element-text: #{$color-element-text};
+  --color-plain-text: #{$color-plain-text};
+  --color-title-text: #{$color-title-text};
+  --color-navigation-text: #{$color-navigation-text};
+  --color-label-text: #{$color-label-text};
+
+  // Element decoration colors
+  --color-underline: #{$color-underline};
+  --color-element-border: #{$color-element-border};
+  --color-title-text-highliter: #{$color-title-text-highliter};
+}

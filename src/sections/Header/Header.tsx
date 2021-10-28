@@ -11,7 +11,7 @@ export type THeaderProps = {
 };
 
 const Header: FC<THeaderProps> = ({ menu }) => (
-  <div data-theme="dark" className={styles.header}>
+  <div className={styles.header}>
     {menu.map((field, index) => (
       <a href={field.url} key={index}>
         <Button type="menu">{field.title}</Button>

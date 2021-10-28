@@ -16,7 +16,7 @@
        /api              predefined list of queries to BE
        /components       moleculas in atomic design. Reusable components (like buttons, inputs etc.). Should have only ui logic, not business logic (dumb components).
        /sections         organisms in atomic design. Could contain business logic, but main purpose is combining components
-       /styles           styles, themes, theme providers and so on
+       /styles           styles, themes, theme provider and so on
        /utils            functions helpers (fetch, get headers and so on)
        index.tsx         app entry point
        index.css         basic styles of application (html, body)
@@ -32,4 +32,7 @@ Please use following style/princeples:
 
     ** styles **
     5) scss variables should be used just for sematic highlighting value maning
-    6) css-variables declared globaly in styles/globals.scss preferable to use in app
+    6) css-variables declared globaly in /styles/globals.scss preferable to use in app
+    7) themes declared in /styles/themes
+    7.1) If you'd like to apply specific theme just wrap your component in <ThemeProvider theme="YOUR_THEME"> WRAPPED_COMPONENT </ThemeProvider>
+    7.2) ThemeProvider lies in /styles/themes/ThemeProvider.tsx
