@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
+
 import styles from './index.module.scss';
 
-type IThemeProviderProps = {
+type TThemeProviderProps = {
   theme?: 'light' | 'dark';
 };
-const ThemeProvider: FC<IThemeProviderProps> = ({ theme = 'light', children }) => (
+const ThemeProvider: FC<TThemeProviderProps> = ({ theme = 'light', children }) => (
   <div className={styles[theme]}>{children}</div>
 );
 export default ThemeProvider;

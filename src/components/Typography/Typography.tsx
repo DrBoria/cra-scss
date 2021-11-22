@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
 import classNames from 'classnames';
+import React, { FC } from 'react';
 
 import styles from './Typography.module.scss';
 
-type ITypographyProps = {
+type TTypographyProps = {
   className?: string;
   withOffset?: boolean;
   style?: any;
@@ -13,7 +13,7 @@ type ITypographyProps = {
  * @visibleName Typography
  */
 
-export const PageTitle: FC<ITypographyProps> = ({ className = '', style, withOffset, children }) => (
+export const PageTitle: FC<TTypographyProps> = ({ className = '', style, withOffset, children }) => (
   <h1
     className={classNames(className, styles.pageTitle, {
       [styles.withOffset]: withOffset,
@@ -24,7 +24,7 @@ export const PageTitle: FC<ITypographyProps> = ({ className = '', style, withOff
   </h1>
 );
 
-export const SubTitle: FC<ITypographyProps> = ({ className = '', style, withOffset, children }) => (
+export const SubTitle: FC<TTypographyProps> = ({ className = '', style, withOffset, children }) => (
   <h2
     className={classNames(className, styles.subTitle, {
       [styles.withOffset]: withOffset,
@@ -35,7 +35,7 @@ export const SubTitle: FC<ITypographyProps> = ({ className = '', style, withOffs
   </h2>
 );
 
-export const SectionTitle: FC<ITypographyProps> = ({ className = '', style, withOffset, children }) => (
+export const SectionTitle: FC<TTypographyProps> = ({ className = '', style, withOffset, children }) => (
   <h3
     className={classNames(className, styles.sectionTitle, {
       [styles.withOffset]: withOffset,
@@ -46,7 +46,7 @@ export const SectionTitle: FC<ITypographyProps> = ({ className = '', style, with
   </h3>
 );
 
-export const PlainText: FC<ITypographyProps> = ({ className = '', style, withOffset, children }) => (
+export const PlainText: FC<TTypographyProps> = ({ className = '', style, withOffset, children }) => (
   <p
     className={classNames(className, styles.plainText, {
       [styles.withOffset]: withOffset,
@@ -57,7 +57,7 @@ export const PlainText: FC<ITypographyProps> = ({ className = '', style, withOff
   </p>
 );
 
-export const Highlighted: FC<ITypographyProps> = ({ className = '', style, withOffset, children }) => (
+export const Highlighted: FC<TTypographyProps> = ({ className = '', style, withOffset, children }) => (
   <span
     className={classNames(className, styles.highlighted, {
       [styles.withOffset]: withOffset,
@@ -68,7 +68,7 @@ export const Highlighted: FC<ITypographyProps> = ({ className = '', style, withO
   </span>
 );
 
-export const Label: FC<ITypographyProps> = ({ className = '', style, withOffset, children }) => (
+export const Label: FC<TTypographyProps> = ({ className = '', style, withOffset, children }) => (
   <span
     className={classNames(className, styles.label, {
       [styles.withOffset]: withOffset,

@@ -1,35 +1,39 @@
 import Header from 'sections/Header';
 import Intro from 'sections/Intro';
 
+import ThemeProvider from 'styles/themes/ThemeProvider';
+
 const menuFields = [
   {
-    id: '1',
+    id:    '1',
     title: 'title',
-    url: 'url',
+    url:   'url',
   },
   {
-    id: '2',
+    id:    '2',
     title: 'title',
-    url: 'url',
+    url:   'url',
   },
   {
-    id: '3',
+    id:    '3',
     title: 'title',
-    url: 'url',
+    url:   'url',
   },
   {
-    id: '4',
+    id:    '4',
     title: 'title',
-    url: 'url',
+    url:   'url',
   },
 ];
 
 function App() {
   return (
-    <div className="App">
-      <Header menu={menuFields} />
-      <Intro />
-    </div>
+    <ThemeProvider theme='dark'>
+      <div className='App'>
+        <Header menu={menuFields} />
+        <Intro />
+      </div>
+    </ThemeProvider>
   );
 }
 

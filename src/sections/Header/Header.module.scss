@@ -6,9 +6,9 @@ $offset-header-horizontal: calc((100% - var(--width-container-content-max)) / 2)
 
 .header {
   position: fixed;
-  z-index: $z-index-navigation;
   top: 0;
   left: 0;
+  z-index: $z-index-navigation;
 
   display: flex;
 

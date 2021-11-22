@@ -3,11 +3,11 @@
 
 .pageTitle {
   @include basicFont;
+
+  color: var(--color-title-text);
   font-family: $font-titles;
 
   text-transform: capitalize;
-
-  color: var(--color-title-text);
 }
 
 .highlighted {
@@ -17,29 +17,29 @@
 .subTitle {
   @include basicFont;
 
-  font-family: $font-titles;
-  font-size: $font-size-subtitle;
-  line-height: $line-height-subtitle;
-
   color: var(--color-title-text);
+  font-size: $font-size-subtitle;
+
+  font-family: $font-titles;
+  line-height: $line-height-subtitle;
 }
 
 .sectionTitle {
   @include basicFont;
 
-  font-family: $font-titles;
+  color: var(--color-title-text);
   font-size: $font-size-sectionTitle;
 
-  color: var(--color-title-text);
+  font-family: $font-titles;
 }
 
 .plainText {
   @include basicFont;
 
-  font-size: 1.1875rem;
-  line-height: 1.6875rem;
-
   color: var(--color-plain-text);
+
+  font-size: $font-size-plainText;
+  line-height: $line-height-plainText;
 }
 
 .label {
@@ -49,6 +49,7 @@
   padding: calc(var(--offset-element-content) / 2);
 
   color: var(--color-label-text);
+
   background-color: var(--color-label-background);
 }
 

@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
 import classNames from 'classnames';
+import React, { FC } from 'react';
 
 import styles from './Button.module.scss';
 
-type IButtonProps = {
+type TButtonProps = {
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   withOffset?: boolean;
@@ -11,7 +11,7 @@ type IButtonProps = {
   type?: 'navigation' | 'menu';
 };
 
-const Button: FC<IButtonProps> = ({ type = 'navigation', className = '', withOffset, children, ...props }) => (
+const Button: FC<TButtonProps> = ({ type = 'navigation', className = '', withOffset, children, ...props }) => (
   <button
     className={classNames(className, styles.button, styles[type], {
       [styles.withOffset]: withOffset,

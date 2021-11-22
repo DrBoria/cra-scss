@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "noFallthroughCasesInSwitch": true

@@ -34,6 +34,7 @@ $offset-section-desktop-x: calc((100% - var(--width-container-content-max)) / 2)
 
 .headingContainer {
   width: 40%;
+
   text-align: left;
 
   &.withOffset {

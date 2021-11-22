@@ -6,12 +6,12 @@
 
 // TODO: fix import issue and remove redundant imports
 @mixin basicFont {
-  font-family: $font-text;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-
   margin: 0;
+
+  font-weight: 500;
+  font-size: var(--font-size);
+  font-family: $font-text;
+  font-style: normal;
 }
 
 /**********************************************************/
@@ -28,21 +28,21 @@
 
 // Small devices
 @mixin mobile {
-  @media (min-width: #{$screen-mobile-width}) {
+  @media ( min-width: #{$screen-mobile-width} ) {
     @content;
   }
 }
 
 // Large devices
 @mixin tablet {
-  @media (min-width: #{$screen-tablet-width}) {
+  @media ( min-width: #{$screen-tablet-width} ) {
     @content;
   }
 }
 
 // Extra large devices
 @mixin desktop {
-  @media (min-width: #{$screen-desktop-width}) {
+  @media ( min-width: #{$screen-desktop-width} ) {
     @content;
   }
 }
