@@ -35,4 +35,4 @@ Please use following style/princeples:
     6) css-variables declared globaly in /styles/globals.scss preferable to use in app
     7) themes declared in /styles/themes
     7.1) If you'd like to apply specific theme just wrap your component in <ThemeProvider theme="YOUR_THEME"> WRAPPED_COMPONENT </ThemeProvider>
-    7.2) ThemeProvider lies in /styles/themes/ThemeProvider.tsx
+    7.2) ThemeProvider resides in /styles/themes/ThemeProvider.tsx
